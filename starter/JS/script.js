@@ -1,5 +1,4 @@
-let note = localStorage.getItem("note");
-
+let note = localStorage.getItem("textarea");
 
 
 
@@ -19,7 +18,6 @@ $("#currentDay").text(moment().format("dddd D/MMM/YYYY h:mm:ss "));
 
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
-    let note = $("#textarea").value;
-    localStorage.setItem("textarea", note);
-    console.log(note)
+    let note = document.querySelector("#textarea").value;
+    window.localStorage.setItem("textarea", note);
 })
