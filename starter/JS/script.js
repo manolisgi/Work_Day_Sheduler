@@ -1,5 +1,6 @@
-let note = localStorage.getItem("textarea");
-
+let note = localStorage.getItem("hourNote");
+$("textarea").text(note);
+let hourNotes = document.querySelectorAll("#textarea");
 
 
 
@@ -12,12 +13,13 @@ $("#currentDay").text(moment().format("dddd D/MMM/YYYY h:mm:ss "));
 
 // Create an "on-click" event attached to the "timeButton" id
 
-
-
-
-
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
-    let note = document.querySelector("#textarea").value;
-    window.localStorage.setItem("textarea", note);
+    let note = $("#textarea")[0].value;
+    localStorage.setItem("hourNote", note);
 })
+
+// for (let i = 0; i < array.length; index++) {
+//     const element = array[index];
+    
+// }
