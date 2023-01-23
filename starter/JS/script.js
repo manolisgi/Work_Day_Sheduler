@@ -1,18 +1,25 @@
-let text09 = document.querySelectorAll("#textarea")[0].value;
-let text10 = document.querySelectorAll("#textarea")[1].value;
-let text11 = document.querySelectorAll("#textarea")[2].value;
-let text12 = document.querySelectorAll("#textarea")[3].value;
-let text13 = document.querySelectorAll("#textarea")[4].value;
-let text14 = document.querySelectorAll("#textarea")[5].value;
-let text15 = document.querySelectorAll("#textarea")[6].value;
-let text16 = document.querySelectorAll("#textarea")[7].value;
-let text17 = document.querySelectorAll("#textarea")[8].value;
+let text09 = localStorage.getItem("hourNote0");
+document.querySelectorAll("#textarea")[0].value = text09;
+let text10 = localStorage.getItem("hourNote1");
+document.querySelectorAll("#textarea")[1].value = text10;
+let text11 = localStorage.getItem("hourNote2");
+document.querySelectorAll("#textarea")[2].value = text11;
+let text12 = localStorage.getItem("hourNote3");
+document.querySelectorAll("#textarea")[3].value = text12;
+let text13 = localStorage.getItem("hourNote4");
+document.querySelectorAll("#textarea")[4].value = text13;
+let text14 = localStorage.getItem("hourNote5");
+document.querySelectorAll("#textarea")[5].value = text14;
+let text15 = localStorage.getItem("hourNote6");
+document.querySelectorAll("#textarea")[6].value = text15;
+let text16 = localStorage.getItem("hourNote7");
+document.querySelectorAll("#textarea")[7].value = text16;
+let text17 = localStorage.getItem("hourNote8");
+document.querySelectorAll("#textarea")[8].value = text17;
 
-// let note = localStorage.getItem("hourNote");
-// let note1 = localStorage.getItem("hourNote1");
-// $("textarea").text(note);
-// let hourNotes = document.querySelectorAll("#textarea");
+// var count = localStorage.getItem("count");
 
+// textarea.textContent = count;
 
 
 // Display the current day at the top of the calender when a user opens the planner
@@ -68,5 +75,11 @@ $(".btn7").on("click", function (event) {
     let note7 = document.querySelectorAll("#textarea")[7].value;
     localStorage.setItem("hourNote7", note7);
 })
+$(".btn8").on("click", function (event) {
+    event.preventDefault();
+    let note8 = document.querySelectorAll("#textarea")[8].value;
+    localStorage.setItem("hourNote8", note8);
+})
+
 
 
