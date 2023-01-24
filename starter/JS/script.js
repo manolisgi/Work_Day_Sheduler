@@ -17,9 +17,9 @@ document.querySelectorAll("#textarea")[7].value = text16;
 let text17 = localStorage.getItem("hourNote8");
 document.querySelectorAll("#textarea")[8].value = text17;
 
-// var count = localStorage.getItem("count");
 
-// textarea.textContent = count;
+
+
 
 
 // Display the current day at the top of the calender when a user opens the planner
@@ -29,10 +29,21 @@ $("#currentDay").text(moment().format("dddd D/MMM/YYYY h:mm:ss "));
 }, 1000);
 
 
+
+// Compare the time in order to paint the textarea
+
+document.querySelectorAll("textarea")[0].setAttribute("data-hour", "1");
+if(moment().format("h") > document.querySelectorAll("#textarea")[0].getAttribute("data-hour")){
+document.querySelectorAll("#textarea")[0].classList.add("present")
+
+}
+
+
+
+
+
+
 // Create an "on-click" event attached to the "timeButton" id
-
-
-
 
 
 $(".btn0").on("click", function (event) {
