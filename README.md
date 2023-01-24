@@ -29,7 +29,7 @@ This page wouldn't exist without the help of the TA's and the collaboration of t
 
 ## Image
 
-
+![A user clicks on slots on the color-coded calendar and edits the events.](./images/05-third-party-apis-homework-demo.gif)
 
 
 ## Link
