@@ -25,18 +25,15 @@ document.querySelectorAll("#textarea")[8].value = text17;
 // Display the current day at the top of the calender when a user opens the planner
 setInterval(
     function () {
-        $("#currentDay").text(moment().format("dddd D/MMM/YYYY h:mm:ss "));
+        $("#currentDay").text(moment().format("dddd D/MMM/YYYY HH:mm:ss "));
     }, 1000);
 
-// var els = document.querySelectorAll('.publish_0');
-// for (var i=0; i < els.length; i++) {
-//     els[i].setAttribute("class", "publish_1");
-// }
+
 
 
 // Compare the time in order to paint the textarea
 
-texts[0].setAttribute("data-hour", 09);
+texts[0].setAttribute("data-hour", 9);
 texts[1].setAttribute("data-hour", 10);
 texts[2].setAttribute("data-hour", 11);
 texts[3].setAttribute("data-hour", 12);
@@ -49,14 +46,14 @@ texts[8].setAttribute("data-hour", 17);
 for (let i = 0; i < 9; i++) {
     
     
-    if (moment().format("hh") === document.querySelectorAll("#textarea")[i].getAttribute("data-hour")) {
-        document.querySelectorAll("#textarea")[i].classList.add("present")
-    }
-    else if (moment().format("hh") > document.querySelectorAll("#textarea")[i].getAttribute("data-hour")) {
+    if (moment().format("k") > document.querySelectorAll("#textarea")[i].getAttribute("data-hour")) {
         document.querySelectorAll("#textarea")[i].classList.add("past")
     }
-    else {
+    else if (moment().format("k") < document.querySelectorAll("#textarea")[i].getAttribute("data-hour")) {
         document.querySelectorAll("#textarea")[i].classList.add("future")
+    }
+    else {
+        document.querySelectorAll("#textarea")[i].classList.add("present")
     
     }
         
